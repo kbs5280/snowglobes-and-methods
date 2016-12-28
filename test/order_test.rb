@@ -5,7 +5,6 @@ require_relative '../lib/snowglobe'
 require_relative '../lib/inventory'
 
 class OrderTest < MiniTest::Test
-
   def test_it_creates_instance_of_order
     order = Order.new({})
 
@@ -13,6 +12,7 @@ class OrderTest < MiniTest::Test
   end
 
   def test_it_creates_an_order
+    skip
     snowglobe = Snowglobe.new({type: 'Prince If I Was Your Girlfriend'})
     inventory = Inventory.new
 
