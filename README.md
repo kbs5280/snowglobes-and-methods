@@ -3,6 +3,8 @@ a Ruby objects and methods exercise using hashes
 
 -----
 
+Clone this repository: `git@github.com:kbs5280/snowglobes-and-methods.git`
+
 Make the tests pass in the following sequence:
 
 * `test/snowglobe_test.rb`
@@ -11,8 +13,6 @@ Make the tests pass in the following sequence:
 
 Run a test file by calling it with `ruby`:
 
-```
-$ ruby test/bag_test.rb
-```
+`$ ruby test/bag_test.rb`
 
 Once a single test is passing, remove "skip" to run the following test.
