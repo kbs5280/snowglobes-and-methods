@@ -13,6 +13,6 @@ Make the tests pass in the following sequence:
 
 Run a test file by calling it with `ruby`:
 
-`$ ruby test/bag_test.rb`
+`$ ruby test/snowglobe_test.rb`
 
 Once a single test is passing, remove "skip" to run the following test.
