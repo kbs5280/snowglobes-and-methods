@@ -10,7 +10,6 @@ class SnowglobeTest < MiniTest::Test
   end
 
   def test_it_creates_a_snowglobe_with_type_and_inscription
-    skip
     snowglobe = Snowglobe.new({type: 'James Brown I Feel Good'})
 
     assert_equal 'James Brown I Feel Good', snowglobe.type
