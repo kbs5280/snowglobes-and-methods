@@ -11,7 +11,6 @@ Make the tests pass in the following sequence:
 * `test/order_test.rb`
 * `test/inventory_test.rb`
 
-
 Run a test file by calling it with `ruby`:
 
 `$ ruby test/snowglobe_test.rb`
