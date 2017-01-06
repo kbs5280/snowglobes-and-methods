@@ -65,9 +65,12 @@ class InventoryTest < MiniTest::Test
   def test_it_adjusts_inventory
     skip
     snowglobe = Snowglobe.new({type: 'Prince If I Was Your Girlfriend'})
+    snowglobe2 = Snowglobe.new({type: 'Gloria Gaynor I Will Survive'})
+
     inventory = Inventory.new
 
     inventory.add_snowglobe_to_inventory(snowglobe, 42)
+    inventory.add_snowglobe_to_inventory(snowglobe2, 42)
 
     order = Order.new({type: 'Prince If I Was Your Girlfriend', quantity: 7})
 
