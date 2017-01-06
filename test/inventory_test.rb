@@ -81,7 +81,7 @@ class InventoryTest < MiniTest::Test
 
   def test_it_restocks_inventory
     skip
-    #inventory should always restock each item with a quantity of 42
+    #inventory should be restocked to maintain a total quantity of 42 for each item
 
     snowglobe = Snowglobe.new({type: 'Prince If I Was Your Girlfriend'})
     snowglobe2 = Snowglobe.new({type: 'Gloria Gaynor I Will Survive'})
