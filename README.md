@@ -1,3 +1,5 @@
+NOTE: _This is an exercise I wrote to teach programming students Ruby fundamentals._
+
 # Snowglobes and Methods
 a Ruby objects and methods exercise using hashes
 
