@@ -71,27 +71,33 @@ class InventoryTest < MiniTest::Test
     assert_equal 35, inventory.sheet['Prince If I Was Your Girlfriend']
   end
 
-  def test_it_restocks_inventory
-    #inventory should always restock each item with a quantity of 42
+  def test_it_restocks_inventory_in_increments_of_two
+    # inventory should be restocked to so that the first item quantity is 42 and
+    # each item quantity increments by two throughout the collection.
 
     snowglobe = Snowglobe.new({type: 'Prince If I Was Your Girlfriend'})
     snowglobe2 = Snowglobe.new({type: 'Gloria Gaynor I Will Survive'})
+    snowglobe3 = Snowglobe.new({type: 'James Brown Get Up Sex Machine'})
 
     inventory = Inventory.new
 
     inventory.add_snowglobe_to_inventory(snowglobe, 42)
     inventory.add_snowglobe_to_inventory(snowglobe2, 42)
+    inventory.add_snowglobe_to_inventory(snowglobe3, 42)
 
     order = Order.new({type: 'Prince If I Was Your Girlfriend', quantity: 7})
     order2 = Order.new({type: 'Gloria Gaynor I Will Survive', quantity: 5})
+    order3 = Order.new({type: 'James Brown Get Up Sex Machine', quantity: 9})
 
     inventory.adjust_inventory(order)
     inventory.adjust_inventory(order2)
+    inventory.adjust_inventory(order3)
 
     inventory.restock_inventory
 
     result = ({"Prince If I Was Your Girlfriend"=>42,
-               "Gloria Gaynor I Will Survive"=>42})
+               "Gloria Gaynor I Will Survive"=>44,
+               "James Brown Get Up Sex Machine"=> 46})
 
     assert_equal result, inventory.sheet
   end

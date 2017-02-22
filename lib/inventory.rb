@@ -14,10 +14,12 @@ class Inventory
   end
 
   def restock_inventory
+    adjusted_value = 42
     @sheet.each do |key, value|
       snowglobe = Snowglobe.new({type: key})
-      quantity = 42 - value
+      quantity = adjusted_value - value
       add_snowglobe_to_inventory(snowglobe, quantity)
+      adjusted_value += 2
     end
   end
 end
